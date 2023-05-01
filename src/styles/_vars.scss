@@ -1,0 +1,27 @@
+$border-radius: 12px;
+$max-width: 1100px;
+$font-famiily: ui-monospace,
+  'Roboto Mono',
+  'Oxygen Mono',
+  'Ubuntu Monospace',
+  'Source Code Pro',
+  'Fira Mono',
+  'Droid Sans Mono',
+  'Courier New',
+  monospace;
+
+$backgroundWhite: #F9F5EC;
+$fontColorBlack: #1E1E1C;
+$margin: clamp(1rem, 5vw, 5rem);
+$radius: 100px;
+
+%hoverText{
+  transition: all .125s ease-in-out;
+    letter-spacing: 2px;
+    text-decoration: underline solid transparent;
+    text-decoration-thickness: 2px;
+    &:hover {
+      text-decoration: underline solid black;
+      text-decoration-thickness: 2px;
+    }
+}
