@@ -1,6 +1,6 @@
 @import 'vars';
 
-.Content{
+.Content {
   flex-grow: 2;
   position: relative;
   background: $backgroundWhite;
@@ -10,44 +10,40 @@
   border-radius: 1px;
   border-top-right-radius: $radius;
   border-bottom-left-radius: $radius;
-  > div {
+
+  >div {
+    display: flex;
     position: absolute;
     height: 100%;
     width: 100%;
   }
 
-  img{
+  img {
     object-fit: "cover";
     z-index: 1;
   }
 }
 
-.Menu{
-  z-index: 2;
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  background: rgba(255,255,255,.4);
-  backdrop-filter: blur(25px);
-  ul{
-    padding: 1rem;
-    list-style: none;
-    padding-left: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    li{
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-      padding: 0 1rem;
-      cursor: pointer;
-      @extend %hoverText;
-      svg{
-        position: relative;
-        top: 1px;
-        margin-left: 1ex;
-      }
+.MenuInner {
+  padding: 1rem;
+  list-style: none;
+  padding-left: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  li {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    cursor: pointer;
+    @extend %hoverText;
+
+    svg {
+      position: relative;
+      top: 1px;
+      margin-left: 1ex;
     }
   }
 }

@@ -1,0 +1,71 @@
+@import "vars";
+
+$contentWidth: calc(100vw - calc(4 * #{$margin}));
+
+.Info {
+  padding: $margin $margin calc(calc(#{$margin} / 2) + 24px + 2rem) $margin;
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: 1fr;
+  flex-grow: 1;
+
+  .Headshot {
+    border-radius: 50%;
+    border: 3px solid $fontColorBlack;
+    width: 200px;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+
+  .TopRow {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 1fr;
+    grid-column-gap: $margin;
+    width: $contentWidth;
+
+    @media screen {
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: $margin;
+        justify-items: center;
+
+        >div:first-of-type {
+          grid-row: 2;
+        }
+      }
+    }
+  }
+
+  .BottomRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto min-content;
+    width: $contentWidth;
+
+    h4 {
+      margin-bottom: .5rem;
+    }
+
+    li {
+      margin: .5rem 0;
+    }
+  }
+
+  .LogoScroll {
+    width: $contentWidth;
+
+    >div {
+      margin: $margin 0;
+      display: flex;
+      gap: $margin;
+      // overflow-x: scroll;
+
+      >* {
+        display: inline-block;
+        // overflow-x: scroll;
+      }
+    }
+  }
+}

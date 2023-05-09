@@ -1,0 +1,35 @@
+@import "vars";
+
+.Contact {
+  flex-grow: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(100px, 400px);
+  width: 100%;
+  min-height: 100%;
+  grid-column-gap: $margin;
+  align-content: center;
+  padding: $margin;
+
+  >div:first-of-type {
+    position: relative;
+    background: red;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid $fontColorBlack;
+  }
+
+  >div:nth-of-type(2) {
+    ul {
+      list-style: none;
+    }
+
+    svg {
+      height: 1.25rem;
+      position: relative;
+      top: .125rem;
+      margin-left: .5rem;
+    }
+  }
+}
