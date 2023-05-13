@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import copy from "@/copy";
 import styles from "../styles/Info.module.scss";
 import { LANGUAGES, useLanguageStore } from "@/utils/hooks";
-import { Blanquerna } from "./Logo";
 import Image from "next/image";
 
 const Info = () => {
@@ -29,19 +28,19 @@ const Info = () => {
 
       <div className={styles.LogoScroll}>
         <div>
-          <Blanquerna />
-          <Blanquerna />
-          <Blanquerna />
-          <Blanquerna />
-          <Blanquerna />
-          <Blanquerna />
-          <Blanquerna />
+          <Image
+            src="/images/credMikel.png"
+            alt="Mikel Stevenson Osasun Zentroa"
+            placholder="blur"
+            fill
+            priority
+          />
         </div>
       </div>
 
       <div className={styles.BottomRow}>
         <div>
-          <h4>{copy.info.studies.heading[lang]}</h4>
+          <small>{copy.info.studies.heading[lang]}</small>
           <ul>
             {copy.info.studies.body.map((study, i) => (
               <li key={i}>
@@ -51,7 +50,7 @@ const Info = () => {
           </ul>
         </div>
         <div>
-          <h4>{copy.info.work.heading[lang]}</h4>
+          <small>{copy.info.work.heading[lang]}</small>
           <ul>
             {copy.info.work.body.map((study, i) => (
               <li key={i}>

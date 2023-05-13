@@ -24,6 +24,27 @@
   }
 }
 
+.Menu {
+  @media screen {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
+
+.MobileMenu {
+  @media screen {
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+
+  >div {
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
+
 .MenuInner {
   padding: 1rem;
   list-style: none;
@@ -39,6 +60,32 @@
     padding: 0 1rem;
     cursor: pointer;
     @extend %hoverText;
+
+    svg {
+      position: relative;
+      top: 1px;
+      margin-left: 1ex;
+    }
+  }
+}
+
+.MenuInnerMobile {
+  padding: 1rem;
+  list-style: none;
+  padding-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+
+  li {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    cursor: pointer;
+    @extend %hoverText;
+    text-align: center;
 
     svg {
       position: relative;
