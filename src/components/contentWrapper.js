@@ -18,7 +18,7 @@ const MenuItem = ({ onClick, active, copy, svg }) => (
   </motion.li>
 );
 
-export const ContentWrapper = ({ children, className, ...props }) => {
+const ContentWrapper = ({ children, className, ...props }) => {
   const lang = useLanguageStore((state) => state.lang);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [viewing, setViewing] = useState(0);
@@ -192,3 +192,5 @@ export const ContentWrapper = ({ children, className, ...props }) => {
     </div>
   );
 };
+
+export default ContentWrapper;
