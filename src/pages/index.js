@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.scss";
-import { LogoTitle, ContentWrapper, LanguageToggle } from "../components";
+import { LogoTitle, ContentWrapper, LanguageToggle } from "../components/index";
 import { motion, useTransform } from "framer-motion";
 import useMouse from "@react-hook/mouse-position";
 import {
