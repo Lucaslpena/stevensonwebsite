@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.scss";
-import LogoTitle from "@/components/Logo";
-import ContentWrapper from "@/components/ContentWrapper";
-import LanguageToggle from "@/components/LanguageToggle";
+// import LogoTitle from "@/components/Logo";
+// import ContentWrapper from "@/components/ContentWrapper";
+// import LanguageToggle from "@/components/LanguageToggle";
 import { motion, useTransform } from "framer-motion";
 import useMouse from "@react-hook/mouse-position";
 import {
@@ -64,7 +64,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.25, delay: 0.25, easings: animationCurve }}
@@ -79,7 +79,7 @@ export default function Home() {
           </div>
         </motion.div>
         <ContentWrapper />
-      </motion.div>
+      </motion.div> */}
       <motion.div
         variants={variants}
         className={styles.Cursor}

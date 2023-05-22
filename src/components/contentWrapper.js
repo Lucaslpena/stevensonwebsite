@@ -6,7 +6,6 @@ import { useLanguageStore } from "@/utils/hooks";
 import copy from "@/copy";
 import styles from "../styles/ContentWrapper.module.scss";
 import Info from "./Info";
-import dynamic from "next/dynamic";
 import Contact from "./Contact";
 
 const MenuItem = ({ onClick, active, copy, svg }) => (
