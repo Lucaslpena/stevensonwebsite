@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "../styles/Home.module.scss";
 import LogoTitle from "@/components/Logo";
-import ContentWrapper from "@/components/ContentWrapper";
+import ContentWrapper from "@/components/Wrapper";
 import LanguageToggle from "@/components/LanguageToggle";
 import { motion, useTransform } from "framer-motion";
 import useMouse from "@react-hook/mouse-position";
@@ -78,7 +78,7 @@ export default function Home() {
             <h3>{copy.healthCenter[lang]}</h3>
           </div>
         </motion.div>
-        {/* <ContentWrapper /> */}
+        <ContentWrapper />
       </motion.div>
       <motion.div
         variants={variants}
