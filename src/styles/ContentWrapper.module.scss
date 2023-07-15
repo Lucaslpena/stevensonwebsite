@@ -1,22 +1,29 @@
 @import 'vars';
 
 .Content {
-  flex-grow: 2;
-  position: relative;
-  background: $backgroundWhite;
-  margin-top: $margin;
-  overflow: hidden;
+  // flex-grow: 2;
+  // position: relative;
+  // background: $backgroundWhite;
+  // margin-top: calc(#{$margin} * 3);
+  // overflow-x: scroll;
 
   border-radius: 1px;
   border-top-right-radius: $radius;
   border-bottom-left-radius: $radius;
+  overflow: hidden;
+  background-color: $sand2;
+  border: 2px solid $sand3;
+  // background-image: url('/images/logos.png');
+  // background-repeat: no-repeat;
+  // background-position: right $margin bottom $margin;
+  // background-size: clamp(300px, 45vw, 600px);
 
-  >div {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
+  // >div {
+  //   display: flex;
+  //   // position: absolute;
+  //   height: 100%;
+  //   // width: 100%;
+  // }
 
   img {
     object-fit: "cover";
@@ -25,19 +32,19 @@
 }
 
 .Menu {
-  @media screen {
-    @media (max-width: 800px) {
-      display: none;
-    }
-  }
+  // @media screen {
+  // @media (max-width: 800px) {
+  display: none;
+  // }
+  // }
 }
 
 .MobileMenu {
-  @media screen {
-    @media (min-width: 800px) {
-      display: none;
-    }
-  }
+  // @media screen {
+  // @media (min-width: 800px) {
+  display: none;
+  // }
+  // }
 
   >div {
     padding: 1rem;
@@ -46,9 +53,8 @@
 }
 
 .MenuInner {
-  padding: 1rem;
+  padding: 1rem !important;
   list-style: none;
-  padding-left: none;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;

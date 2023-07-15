@@ -1,6 +1,26 @@
+@import "vars";
+
 .LangToggle {
   white-space: nowrap;
-  span {
+
+  display: flex;
+  gap: 1rem;
+  align-items: row;
+  padding: 1rem 1.5rem;
+
+  div {
     cursor: pointer;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    aspect-ratio: 1;
+    padding: 0.625rem;
+    border: 1px solid $black;
+
+    h4 {
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+    }
   }
 }

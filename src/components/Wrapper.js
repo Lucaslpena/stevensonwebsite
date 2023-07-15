@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useLanguageStore } from "@/utils/hooks";
 import copy from "@/copy";
 import styles from "../styles/ContentWrapper.module.scss";
@@ -20,7 +20,7 @@ const MenuItem = ({ onClick, active, copy, svg }) => (
 const Wrapper = ({ children, className, ...props }) => {
   const lang = useLanguageStore((state) => state.lang);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [viewing, setViewing] = useState(0);
+  const [viewing, setViewing] = useState(1);
   const router = useRouter();
   useEffect(() => {
     // if (viewing === 1) router.push("/?tab=1", undefined, { shallow: true });
@@ -97,33 +97,39 @@ const Wrapper = ({ children, className, ...props }) => {
     </>
   );
 
+  const items = [
+    <Image
+      // src="/images/1.jpg"
+      alt="Mikel Stevenson Osasun Zentroa"
+      // width={200}
+      // height={200}
+      placholder="blur"
+      fill
+      priority
+      style={{ objectFit: "cover" }}
+      key={0}
+    />,
+    <Info key={1} />,
+    <div key={3}>Services</div>,
+    <Contact key={4} />,
+  ];
+
   return (
-    <div className={styles.Content}>
+    <motion.div
+      className={styles.Content}
+      style={viewing === 0 && { overflow: "hidden" }}
+    >
       <div>
-        {viewing === 0 && (
-          <Image
-            src="/images/1.jpg"
-            alt="Mikel Stevenson Osasun Zentroa"
-            // width={200}
-            // height={200}
-            placholder="blur"
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-          />
-        )}
-        {viewing === 1 && <Info />}
-        {viewing === 2 && <div>Services</div>}
-        {viewing === 3 && <Contact />}
+        <AnimatePresence>{items[viewing]}</AnimatePresence>
       </div>
       <motion.nav
         className={styles.Menu}
         style={{
           position: "absolute",
-          bottom: "1rem",
+          top: "1rem",
           width: "100%",
           background:
-            viewing > 0 ? "rgba(255, 255, 255, .0)" : "rgba(255, 255, 255, .4)",
+            viewing > 0 ? "rgba(255, 255, 255, .6)" : "rgba(255, 255, 255, .4)",
           backdropFilter: viewing > 0 ? "blur(25px)" : "normal",
           zIndex: 2,
         }}
@@ -137,7 +143,7 @@ const Wrapper = ({ children, className, ...props }) => {
           top: 0,
           left: 0,
           background:
-            viewing > 0 ? "rgba(255, 255, 255, .0)" : "rgba(255, 255, 255, .4)",
+            viewing > 0 ? "rgba(255, 255, 255, .6)" : "rgba(255, 255, 255, .4)",
           backdropFilter: viewing > 0 ? "blur(25px)" : "normal",
           zIndex: 2,
           width: mobileMenuOpen && "100%",
@@ -188,7 +194,7 @@ const Wrapper = ({ children, className, ...props }) => {
           </ul>
         )}
       </motion.nav>
-    </div>
+    </motion.div>
   );
 };
 

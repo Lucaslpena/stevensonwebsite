@@ -11,11 +11,11 @@ const location = {
   lng: -2.420982,
 };
 
-const Contact = () => {
+const Contact = ({ ...props }) => {
   const lang = useLanguageStore((state) => state.lang);
 
   return (
-    <div className={styles.Contact}>
+    <div className={styles.Contact} {...props}>
       <div>
         <Link href="https://goo.gl/maps/dJvjiFssUESBgecj7" legacyBehavior>
           <Image

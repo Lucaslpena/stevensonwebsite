@@ -1,3 +1,5 @@
+import { m } from "framer-motion";
+
 const copy = {
   healthCenter: {
     EUS: "Osasun Zentroa",
@@ -8,7 +10,7 @@ const copy = {
     info: {
       EUS: "Informazioa",
       ESP: "Información",
-      ENG: "Information",
+      ENG: "ABOUT",
     },
     services: {
       EUS: "Zerbitzuak",
@@ -19,6 +21,18 @@ const copy = {
       EUS: "Kontaktua",
       ESP: "Contacto",
       ENG: "Contact",
+    },
+  },
+  home: {
+    heading: {
+      EUS: "Stevenson Osasun Zentroa",
+      ESP: "Centro de Salud Stevenson",
+      ENG: "Stevenson Health Clinic",
+    },
+    body: {
+      EUS: "Fisioterapia, Osteopatia, Pilates, Nutrición, Psicología, Entrenamiento Personal",
+      ESP: "Fisioterapia, Osteopatia, Pilates, Nutrición, Psicología, Entrenamiento Personal",
+      ENG: "Fisioterapia, Osteopatia, Pilates, Nutrición, Psicología, Entrenamiento Personal",
     },
   },
   info: {

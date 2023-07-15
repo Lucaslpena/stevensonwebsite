@@ -71,23 +71,16 @@ export default function Home() {
         className={`${styles.main} ${inter.className}`}
         ref={ref}
       >
-        <motion.div>
-          <LogoTitle />
-          <div>
-            <LanguageToggle />
-            <h3>{copy.healthCenter[lang]}</h3>
-          </div>
-        </motion.div>
         <ContentWrapper />
       </motion.div>
-      <motion.div
+      {/* <motion.div
         variants={variants}
         className={styles.Cursor}
         animate={cursorVariant}
         transition={spring}
       >
         <span className="cursorText"></span>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }
