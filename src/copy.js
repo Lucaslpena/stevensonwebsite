@@ -1,5 +1,3 @@
-import { m } from "framer-motion";
-
 const copy = {
   healthCenter: {
     EUS: "Osasun Zentroa",
@@ -50,9 +48,9 @@ const copy = {
     },
     studies: {
       heading: {
-        ENG: "Studies",
-        EUS: "Ikasketak",
-        ESP: "Estudios",
+        ENG: "Completed Degrees and Courses",
+        EUS: "Graduak eta ikastaroak",
+        ESP: "Grados y cursos",
       },
       body: [
         "Universitat Ramon Llull-Blanquerna",
@@ -65,7 +63,7 @@ const copy = {
     },
     work: {
       heading: {
-        ENG: "Work",
+        ENG: "past experience",
         EUS: "Lan esperientzia",
         ESP: "Experiencia laboral",
       },

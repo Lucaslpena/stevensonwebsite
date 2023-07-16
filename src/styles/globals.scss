@@ -30,36 +30,37 @@ h5 {
   line-height: 1.3;
   margin: none;
   letter-spacing: 1px;
-  color: $sand12;
+  color: $black;
 }
 
 h1 {
-  font-size: clamp(1.802rem, 5vw, 3.052rem);
+  font-size: clamp(1.602rem, 6vw, 2.488rem);
 }
 
 h2 {
-  font-size: clamp(1.602rem, 4vw, 2.441rem);
+  font-size: clamp(1.502rem, 5vw, 2.074rem);
 }
 
 h3 {
-  font-size: clamp(1.424rem, 3vw, 1.953rem);
+  font-size: clamp(1.424rem, 4vw, 1.728rem);
 }
 
 h4 {
-  font-size: clamp(1.266rem, 2vw, 1.563rem);
+  font-size: clamp(1.266rem, 3vw, 1.44rem);
 }
 
 h5 {
-  font-size: clamp(1.125rem, 1vw, 1.25rem);
+  font-size: clamp(1.125rem, 2vw, 1.2rem);
 }
 
-p {
-  font-size: clamp(1.0875rem, 1vw, 1.125rem);
+p,
+a {
+  font-size: clamp(.98rem, 2vw, 1.1rem);
 }
 
 small,
 .text_small {
-  font-size: clap(0.75rem, 0.9vw, 0.889rem);
+  font-size: clap(0.75rem, 0.5vw, 0.833rem);
   text-transform: uppercase !important;
   font-weight: bold;
   letter-spacing: 2px;
