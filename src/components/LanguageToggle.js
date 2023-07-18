@@ -9,32 +9,31 @@ import styles from "../styles/LangaugeToggle.module.scss";
 import { LANGUAGES, useLanguageStore } from "@/utils/hooks";
 
 export const LanguageToggle = () => {
-  const transiton = { duration: 0.25, easings: animationCurve };
+  const transiton = { duration: 0.125, easings: animationCurve };
   const lang = useLanguageStore((state) => state.lang);
   const setLang = useLanguageStore((state) => state.setLanguage);
+
+  const containerVariants = {
+    active: {
+      background: "hsla(60, 4%, 11%, 1)",
+      color: "hsla(40, 50%, 95%, 1)",
+    },
+    inactive: {
+      background: "transparent",
+      color: "hsla(60, 4%, 11%, 1)",
+    },
+  };
 
   const toggler = (passedLang) => (
     <motion.div
       onClick={() => setLang(passedLang)}
-      style={{
-        background:
-          lang === LANGUAGES[passedLang]
-            ? "hsla(60, 4%, 11%, 1)"
-            : "transparent",
-        transition: transiton,
-      }}
+      initial="inactive"
+      whileHover="active"
+      animate={lang === LANGUAGES[passedLang] ? "active" : "inactive"}
+      variants={containerVariants}
       transition={transiton}
     >
-      <motion.h4
-        style={{
-          color:
-            lang === LANGUAGES[passedLang]
-              ? "hsla(40, 50%, 95%, 1)"
-              : "hsla(60, 4%, 11%, 1)",
-        }}
-      >
-        {LANGUAGES[passedLang]}
-      </motion.h4>
+      <motion.h4 style={{ color: "unset" }}>{LANGUAGES[passedLang]}</motion.h4>
     </motion.div>
   );
 

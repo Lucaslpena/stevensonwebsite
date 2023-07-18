@@ -19,3 +19,6 @@ export const sand = {
   sand11: "hsl(50, 4.0%, 61.8%)",
   sand12: "hsl(56, 4.0%, 92.8%)",
 };
+
+export const ozBlack = "hsla(60, 4%, 11%, 1)";
+export const ozWhite = "hsla(40, 50%, 95%, 1)";

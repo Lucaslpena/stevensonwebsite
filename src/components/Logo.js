@@ -13,7 +13,7 @@ const LogoTitle = (props) => {
       onClick={() => router.push("/")}
       style={{
         cursor: "pointer",
-        madding: "1.5rem auto",
+        padding: "1.5rem auto",
         boxSizing: "border-box",
       }}
     >

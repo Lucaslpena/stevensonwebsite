@@ -5,6 +5,7 @@
   top: 0px;
   background-color: $offWhite;
   height: $navHeight;
+  z-index: 99;
 
   ul {
     list-style: none;
@@ -16,20 +17,20 @@
     margin: 0;
 
     li {
-      padding: 1rem 1.5rem;
       border-bottom: 1px solid $black;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
 
       a {
+        padding: 1rem 1.5rem;
         text-decoration: none;
-        color: $black;
         font-style: italic;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase;
-
-        &:hover {
-          color: $black;
-        }
+        width: 100%;
+        flex-grow: 2;
       }
     }
   }
